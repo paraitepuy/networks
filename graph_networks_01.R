@@ -176,6 +176,6 @@ mycorporatenetwork <-
 
 visSave(mycorporatenetwork, "mynetwork01.html")
 
-# Now you can send your company report with an explorable network.
+# Now you can send the company report you were working on, with an explorable network.
 
 
