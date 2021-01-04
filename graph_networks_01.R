@@ -9,39 +9,39 @@ library(tidyverse)
 # We will graph a corporate network, step by step, following an example.
 # Note: Use R´s 'help' to know more about all the functions we will be using.
 
-# Let's start with the example! 
+# Let's start! 
 # You are interested in a company with 5 officers. You have the information in a .csv file.
+# You can find the file for this example in the folder input_output. All data is fictional.
 onecompany <- read.csv("onecompany.csv", stringsAsFactors = FALSE)
-# Not sure what read.csv does? Run: 
-help(read.csv)
 
 # To use visNetwork we need two data frames: one for nodes and one for edges.
 # In this case: nodes are the names of our companies and people, and edges the relationship between them.
 
-# Nodes need to be unique and have an 'id'
+# Nodes need a unique 'id'
 nodes <- data.frame(id=c(onecompany$companyname,onecompany$companyofficers)) %>%
   unique()
 
-# Edges need to have 'from' and 'to'
+# Edges make a connection between two nodes. They need to have 'from' and 'to'
 edges <- data.frame(from=onecompany$companyname,
                     to=onecompany$companyofficers)
 
-# You can draw your first graph...
+# You can already draw your first graph...
 visNetwork(nodes = nodes,
            edges = edges)
 
-# ... but that graph needs names, aka labels and/or titles (which show on hover)
-nodes$label <- nodes$id
-edges$title <- onecompany$officerposition
+# ... but that graph needs names, aka labels or titles (which show on hover)
+nodes$label <- nodes$id 
+edges$title <- onecompany$officerposition 
 
 # Draw your graph again: It's done!
 visNetwork(nodes = nodes,
            edges = edges)
 
-# There are more things you can do that can be useful for your visualization
+# There are more things you can do that can be useful for your visualization.
 
 ## 1) Change colours
 ## For example, because you want to draw attention to one of the directors
+## We'll write the colors in hex
 nodes$color <- ifelse(nodes$id=="Tani, Monica","#F2A918","#4C67BD")
 
 visNetwork(nodes = nodes,
@@ -65,14 +65,16 @@ visNetwork(nodes = nodes,
            edges = edges)
 
 ## 4) Change the shape to an icon
-## Start by creating groups of nodes. We'll create 3 groups: companies, officers and target officers
+## Start by creating groups of nodes. We'll create 3 groups: 'companies', 'targetofficers' and 'officers'
 nodes$group <- ifelse(nodes$id %in% onecompany$companyname, "companies",
                       ifelse(nodes$id %in% onecompany$companyofficers & nodes$id=="Tani, Monica", 
                              "targetofficers",
                                 ifelse(nodes$id %in% onecompany$companyofficers,"officers",NA)))
 
 nodes <- select(nodes,-c(color,shape,size)) #remove these columns so the source of the shapes and colors 
-# correspond to the new groups we created (and not the old colours and shapes).
+#correspond to the new groups we created and not the old colours and shapes.
+
+# Pick the unicode for your icon at: https://fontawesome.com/icons?d=gallery
 
 visNetwork(nodes = nodes,
            edges = edges) %>%
@@ -175,6 +177,6 @@ mycorporatenetwork <-
 
 visSave(mycorporatenetwork, "mynetwork01.html")
 
-# Now you can send the company report you were working on, with an explorable network.
+# Now you can send the company report you were working on, with an explorable network :)
 
 
