@@ -1,6 +1,6 @@
 # networks
-Graph corporate connections from step 1.
+Graph corporate networks, from step 1.
 
-The plan is we learn about data analytics & visualization to investigate corruption, money laundering and illicit trade.
+Here you will find examples using [visNetwork](http://datastorm-open.github.io/visNetwork/) to build interactive network visualizations. We will be using networks to investigate corruption, money laundering and illicit trade.
 
-We'll follow the scripts!
+We will learn how to do it by following the scripts!
