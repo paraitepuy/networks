@@ -2,7 +2,7 @@ library(visNetwork)
 library(tidyverse)
 
 #########################################################################################################
-# Try this if you need to: 
+# Follow this to: 
 # GRAPH CORPORATE NETWORKS
 #########################################################################################################
 
@@ -11,7 +11,7 @@ library(tidyverse)
 
 # Let's start! 
 # You are interested in a company with 5 officers. You have the information in a .csv file.
-# You can find the file for this example in the folder input_output. All data is fictional.
+# (You will find the file for this example in the folder input_output. All data is fictional).
 onecompany <- read.csv("onecompany.csv", stringsAsFactors = FALSE)
 
 # To use visNetwork we need two data frames: one for nodes and one for edges.
