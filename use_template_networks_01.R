@@ -1,12 +1,12 @@
 library(visNetwork)
 library(tidyverse)
-setwd(dir = "~/Documents/networks/")
+
 #########################################################################################################
 # Use this if you need to: 
 # GRAPH CORPORATE NETWORKS
 #########################################################################################################
 
-# Use the template01.csv and fill it up with your data. 
+# Use the template01.csv in the input_output folder and fill it up with your data. 
 # Do not change the column names or the name of the file.
 # Go to the bottom of this script if you need details on how to fill each field.
 # Run the following script and get the graph your report needs.
