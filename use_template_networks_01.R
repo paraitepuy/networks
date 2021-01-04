@@ -6,10 +6,13 @@ library(tidyverse)
 # GRAPH CORPORATE NETWORKS
 #########################################################################################################
 
-# Use the template01.csv in the input_output folder.
+# USE YOUR DATA from a .csv file
+# Download the template01.csv available in the input_output folder.
 # Delete the example data and copy the data that you would like to show.
 # Do not change the column names or the name of the file.
 # Go to the bottom of this script if you need details on how to fill each field.
+
+# GRAPH YOUR CORPORATE NETWORK 
 # Run the following script and get the graph your report needs.
 
 templatedata <- read.csv("template01.csv", stringsAsFactors = FALSE)
@@ -76,5 +79,4 @@ visSave(mycorporatenetwork, "corporatenetwork01.html")
 # company with a different colour.
 
 # 'sources' make note about where the information about the nodes and edges came from. For audit trail. 
-
 #########################################################################################################
