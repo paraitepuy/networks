@@ -6,7 +6,8 @@ library(tidyverse)
 # GRAPH CORPORATE NETWORKS
 #########################################################################################################
 
-# Use the template01.csv in the input_output folder and fill it up with your data. 
+# Use the template01.csv in the input_output folder.
+# Delete the example data and copy the data that you would like to show.
 # Do not change the column names or the name of the file.
 # Go to the bottom of this script if you need details on how to fill each field.
 # Run the following script and get the graph your report needs.
