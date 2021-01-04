@@ -9,9 +9,8 @@ library(tidyverse)
 # We will graph a corporate network, step by step, following an example.
 # Note: Use R´s 'help' to know more about all the functions we will be using.
 
-# Let's start! 
-# You are interested in a company with 5 officers.
-# You have the information in a .csv file.
+# Let's start with the example! 
+# You are interested in a company with 5 officers. You have the information in a .csv file.
 onecompany <- read.csv("onecompany.csv", stringsAsFactors = FALSE)
 # Not sure what read.csv does? Run: 
 help(read.csv)
