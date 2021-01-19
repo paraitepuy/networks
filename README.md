@@ -1,6 +1,4 @@
 # networks
-Here you will find examples using [visNetwork](http://datastorm-open.github.io/visNetwork/) to build interactive visualizations. Examples will build corporate networks connecting companies and their directors and shareholders to investigate corruption, money laundering and illicit trade.
+Displaying connections between companies, their directors and shareholders is useful when investigating corruption, money laundering or illicit trade. Here you will find examples of interactive visualizations of corporate networks using [visNetwork](http://datastorm-open.github.io/visNetwork/). 
 
-Follow the numbered R scripts (e.g. "01_graph_...") to go step by step. All the files to replicate the examples are in the 'input_output' folder.
-
-If you want to create your own graphs starting a bit ahead, you can go to the templates and scripts named "use_template". 
+The numbered R scripts (e.g. "01_graph_...") go step by step. All the files to replicate the examples are in the 'input_output' folder. If you want to skip the steps, go to the templates. 
