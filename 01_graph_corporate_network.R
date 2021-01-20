@@ -7,9 +7,7 @@ library(tidyverse)
 #########################################################################################################
 
 # We will graph a corporate network, step by step, following an example.
-# Note: Use R´s 'help' to know more about all the functions we will be using.
 
-# Let's start! 
 # You are interested in a company with 5 officers. You have the information in a .csv file.
 # (You will find the file for this example in the folder input_output. All data is fictional).
 onecompany <- read.csv("onecompany.csv", stringsAsFactors = FALSE)
@@ -17,11 +15,13 @@ onecompany <- read.csv("onecompany.csv", stringsAsFactors = FALSE)
 # To use visNetwork we need two data frames: one for nodes and one for edges.
 # In this case: nodes are the names of our companies and people, and edges the relationship between them.
 
+# NODES 
 # Nodes need a unique 'id'
 nodes <- data.frame(id=c(onecompany$companyname,onecompany$companyofficers)) %>%
   unique()
 
-# Edges make a connection between two nodes. They need to have 'from' and 'to'
+# EDGES connect two nodes. 
+# They need to have 'from' and 'to'
 edges <- data.frame(from=onecompany$companyname,
                     to=onecompany$companyofficers)
 
@@ -37,11 +37,11 @@ edges$title <- onecompany$officerposition
 visNetwork(nodes = nodes,
            edges = edges)
 
-# There are more things you can do that can be useful for your visualization.
+
+# More things useful for your visualization.
 
 ## 1) Change colours
 ## For example, because you want to draw attention to one of the directors
-## We'll write the colors in hex
 nodes$color <- ifelse(nodes$id=="Tani, Monica","#F2A918","#4C67BD")
 
 visNetwork(nodes = nodes,
