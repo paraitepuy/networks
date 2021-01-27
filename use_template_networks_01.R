@@ -12,8 +12,7 @@ library(tidyverse)
 # Do not change the column names or the name of the file.
 # Go to the bottom of this script if you need details on how to fill each field.
 
-# GRAPH YOUR CORPORATE NETWORK 
-# Run the following script and get the graph your report needs.
+# GRAPH YOUR CORPORATE NETWORK
 
 templatedata <- read.csv("template01.csv", stringsAsFactors = FALSE)
 
