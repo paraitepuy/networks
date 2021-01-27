@@ -14,7 +14,7 @@ library(tidyverse)
 
 # GRAPH YOUR CORPORATE NETWORK
 
-templatedata <- read.csv("template01.csv", stringsAsFactors = FALSE)
+templatedata <- read.csv("template01.csv", stringsAsFactors = FALSE, fileEncoding="UTF-8-BOM")
 
 # The nodes
 nodes <- data.frame(id=c(templatedata$companyname,templatedata$officername),
